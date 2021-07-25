@@ -12,7 +12,7 @@
 #define SLINK_PIN 2 // S-Link Control-A1 pin
 #define SERIAL_COM_PORT_SPEED 115200UL // 115 kbps
 
-#include "Sony_SLink.h"
+#include "/mnt/E4C80B3DC80B0D8C/arduino/final_s-link/Sony_SLink-master/Sony_SLink.h"
 Slink slink;
 
 void setup() {

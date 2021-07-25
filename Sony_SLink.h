@@ -72,6 +72,9 @@
 #define SLINK_CMD_CD_NEXT     8 // Next Track
 #define SLINK_CMD_CD_PREV     9 // Previous Track
 
+// new
+#define SLINK_CMD_CD_RECP     7 // get ready to record
+
 // List of parameters for SLINK_CMD_AMP_SET_INPUT_CHAN
 #define SLINK_CMDP_IN_TUNER   0
 #define SLINK_CMDP_IN_PHONO   1
@@ -104,7 +107,8 @@ class Slink
 {
   public:
     void init(int slinkPin);
-    void sendCommand(unsigned int deviceId = 0x00, unsigned int commandId1 = 0x00, int commandId2 = -1, int commandId3 = -1);
+    //void sendCommand(unsigned int deviceId = 0x00, unsigned int commandId1 = 0x00, int commandId2 = -1, int commandId3 = -1);
+    void sendCommand(unsigned int deviceId = 0x00, unsigned int commandId1 = 0x00, int commandId2 = -1, int commandId3 = -1, int commandId4 = -1, int commandId5 = -1, int commandId6 = -1, int commandId7 = -1, int commandId8 = -1, int commandId9 = -1, int commandId10 = -1, int commandId11 = -1, int commandId12 = -1, int commandId13 = -1, int commandId14 = -1, int commandId15 = -1, int commandId16 = -1, int commandId17 = -1, int commandId18 = -1);
 #if !defined (__AVR_ATtiny85__)
     void inputMonitor(int type = 0, boolean idle = false, unsigned long uSecTimeout = 10000000UL, unsigned long serialSpeed = 115200UL);
 #endif

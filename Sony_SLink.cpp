@@ -78,7 +78,8 @@ void Slink::init(int slinkPin){
 // We advise to issue every command twice, in case the first time collided
 // with an incoming response sequence from the other device
 
-void Slink::sendCommand(unsigned int deviceId, unsigned int commandId1, int commandId2, int commandId3){
+//void Slink::sendCommand(unsigned int deviceId, unsigned int commandId1, int commandId2, int commandId3){
+void Slink::sendCommand(unsigned int deviceId, unsigned int commandId1, int commandId2, int commandId3, int commandId4, int commandId5, int commandId6, int commandId7, int commandId8, int commandId9, int commandId10, int commandId11, int commandId12, int commandId13, int commandId14, int commandId15, int commandId16, int commandId17, int commandId18){
   unsigned long Start;
 
   pinMode(_slinkPin, INPUT);
@@ -92,6 +93,37 @@ void Slink::sendCommand(unsigned int deviceId, unsigned int commandId1, int comm
     _writeByte(commandId2); // Send the actual Command-Code (one byte)
   if (commandId3>=0)
     _writeByte(commandId3); // Send an additional Command-Code (one byte)
+  if (commandId4>=0)
+    _writeByte(commandId4); // Send an additional Command-Code (one byte)
+  if (commandId5>=0)
+    _writeByte(commandId5); // Send an additional Command-Code (one byte)
+  if (commandId6>=0)
+    _writeByte(commandId6); // Send an additional Command-Code (one byte)
+  if (commandId7>=0)
+    _writeByte(commandId7); // Send an additional Command-Code (one byte)
+  if (commandId8>=0)
+    _writeByte(commandId8); // Send an additional Command-Code (one byte)
+  if (commandId9>=0)
+    _writeByte(commandId9); // Send an additional Command-Code (one byte)
+  if (commandId10>=0)
+    _writeByte(commandId10); // Send an additional Command-Code (one byte)
+  if (commandId11>=0)
+    _writeByte(commandId11); // Send an additional Command-Code (one byte)
+  if (commandId12>=0)
+    _writeByte(commandId12); // Send an additional Command-Code (one byte)
+  if (commandId13>=0)
+    _writeByte(commandId13); // Send an additional Command-Code (one byte)
+  if (commandId14>=0)
+    _writeByte(commandId14); // Send an additional Command-Code (one byte)
+  if (commandId15>=0)
+    _writeByte(commandId15); // Send an additional Command-Code (one byte)
+  if (commandId16>=0)
+    _writeByte(commandId16); // Send an additional Command-Code (one byte)
+  if (commandId17>=0)
+    _writeByte(commandId17); // Send an additional Command-Code (one byte)
+  if (commandId18>=0)
+    _writeByte(commandId18); // Send an additional Command-Code (one byte)
+
   pinMode(_slinkPin, INPUT); // Return to INPUT
   do { // The command sequence must be padded (by 5V) at the end to make it 45 millisec. long
   delayMicroseconds(SLINK_LOOP_DELAY);
